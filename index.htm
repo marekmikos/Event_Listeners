@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener</title>
+</head>
+<body>
+    <button class="button1">Click me!</button>
+    <button class="button2">Change the text of the button above</button>
+    <button class="button3">Change color of all buttons</button>
+    <!-- loading jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- adding jquery script -->
+    <script>
+        // after we click .button, there will a message in console
+        $('.button1').click(() => {
+            console.log("Yeah, you clicked me");
+        });
+
+        // or like this
+        // $('.button').click(function() {
+        //     console.log("Yeah, you clicked me");
+        // });
+
+        // Add another button to the webpage
+        // When the user clicks on the second button change the first button's text    
+
+        $('.button2').click(() => {
+            $('.button1').html("You have change me :-) !!!");
+        });
+
+        // Add a third button to the webpage
+        // When the user clicks on the last button, change the background-color of each button
+
+        $('.button3').click(() => {
+            $('button').css("background-color","red");
+        }); 
+
+    </script>
+</body>
+</html>
